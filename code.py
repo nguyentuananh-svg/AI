@@ -12,7 +12,7 @@ def TimViTri(TrangThai, GiaTri):
                 return i, j
     return None
 
-# -------------------------------
+
 # Hàm tính khoảng cách Manhattan (h)
 
 def KhoangCachManhattan(TrangThai):
@@ -25,13 +25,12 @@ def KhoangCachManhattan(TrangThai):
                 tong += abs(i - iDich) + abs(j - jDich)
     return tong
 
-# -------------------------------
 # Chuyển ma trận sang tuple (để lưu trong set)
 
 def DoiSangTuple(TrangThai):
     return tuple(tuple(hang) for hang in TrangThai)
 
-# -------------------------------
+
 # Sinh các trạng thái hàng xóm (neighbor)
 
 def HangXom(TrangThai):
@@ -46,7 +45,6 @@ def HangXom(TrangThai):
             KetQua.append((Moi, Huong))
     return KetQua
 
-# -------------------------------
 # Thuật toán A*
 
 def ASao(TrangThaiBanDau):
@@ -77,7 +75,7 @@ def ASao(TrangThaiBanDau):
             fMoi = gMoi + hMoi
             heapq.heappush(HangCho, (fMoi, gMoi, Ke, DuongDi + [(Ke, Huong)]))
 
-# -------------------------------
+
 # Chạy thử
 
 TrangThaiBanDau = [[1, 2, 3],
